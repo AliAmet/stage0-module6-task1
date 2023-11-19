@@ -15,23 +15,26 @@ public class Animal {
     }
 
     String getDescription(){
-        if (numberOfPaws == 1){
-            if (hasFur == true) {
-                return "This animal is mostly " +  color +". It has " +  numberOfPaws +
-                        " paw and a fur";
-            } else{
-                return "This animal is mostly " +  color +". It has " +  numberOfPaws +
-                        " paw and no fur";
-            }
-        }
-        else{
-            if (hasFur == true) {
-                return "This animal is mostly " +  color +". It has " +  numberOfPaws +
-                        " paws and a fur";
-            } else{
-                return "This animal is mostly " +  color +". It has " +  numberOfPaws +
-                        " paws and no fur";
-            }
-        }
+        String pawType = (numberOfPaws == 1) ? "paw" : "paws";
+        String furStatus = (hasFur) ? "a" : "no";
+        return "This animal is mostly " + color + ". It has " + numberOfPaws + " " + pawType + " and " + furStatus + " fur.";
+//        if (numberOfPaws == 1){
+//            if (hasFur == true) {
+//                return "This animal is mostly " +  color +". It has " +  numberOfPaws +
+//                        " paw and a fur";
+//            } else{
+//                return "This animal is mostly " +  color +". It has " +  numberOfPaws +
+//                        " paw and no fur";
+//            }
+//        }
+//        else{
+//            if (hasFur == true) {
+//                return "This animal is mostly " +  color +". It has " +  numberOfPaws +
+//                        " paws and a fur";
+//            } else{
+//                return "This animal is mostly " +  color +". It has " +  numberOfPaws +
+//                        " paws and no fur";
+//            }
+//        }
     }
 }
